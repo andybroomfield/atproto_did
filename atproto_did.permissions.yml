@@ -1,0 +1,7 @@
+administer atproto_did:
+  title: 'Administer atproto-did config entities'
+  restrict access: TRUE
+
+view .well-known atproto_did:
+  title: 'View the .well-known atproto_did txt records'
+  description: 'Access /.well-known/atproto-did for each domain'

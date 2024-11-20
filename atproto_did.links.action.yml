@@ -1,0 +1,5 @@
+entity.atproto_did.add_form:
+  route_name: 'entity.atproto_did.add_form'
+  title: 'Add at protocol did'
+  appears_on:
+    - entity.atproto_did.collection

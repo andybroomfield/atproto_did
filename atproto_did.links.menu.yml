@@ -1,0 +1,5 @@
+entity.atproto_did.overview:
+  title: At protocol dids
+  parent: system.admin_config_services
+  description: 'List of at protocol dids managed by this site.'
+  route_name: entity.atproto_did.collection

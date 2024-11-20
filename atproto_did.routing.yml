@@ -1,0 +1,38 @@
+entity.atproto_did.collection:
+  path: '/admin/config/services/atproto-did'
+  defaults:
+    _entity_list: 'atproto_did'
+    _title: 'At protocol did configuration'
+  requirements:
+    _permission: 'administer atproto_did'
+
+entity.atproto_did.add_form:
+  path: '/admin/config/services/atproto_did/add'
+  defaults:
+    _entity_form: 'atproto_did.add'
+    _title: 'Add an at protocol did'
+  requirements:
+    _permission: 'administer atproto_did'
+
+entity.atproto_did.edit_form:
+  path: '/admin/config/services/atproto-did/{atproto_did}'
+  defaults:
+    _entity_form: 'atproto_did.edit'
+    _title: 'Edit an at protocol did'
+  requirements:
+    _permission: 'administer atproto_did'
+
+entity.atproto_did.delete_form:
+  path: '/admin/config/services/atproto-did/{atproto_did}/delete'
+  defaults:
+    _entity_form: 'atproto_did.delete'
+    _title: 'Delete an at protocol did'
+  requirements:
+    _permission: 'administer atproto_did'
+
+atproto_did.well-known:
+  path: '/.well-known/atproto-did'
+  defaults:
+    _controller: '\Drupal\atproto_did\Controller\AtprotoDidController::wellKnown'
+  requirements:
+    _permission: 'view .well-known atproto_did'

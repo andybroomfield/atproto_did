@@ -1,0 +1,5 @@
+name: 'atproto-did'
+type: module
+description: 'Provides a means to add an atprotocol did at /.well-known/atproto-did with subdomain support.'
+package: Custom
+core_version_requirement: ^10 || ^11

@@ -1,0 +1,15 @@
+atproto_did.atproto_did.*:
+  type: config_entity
+  label: At protocol did
+  mapping:
+    id:
+      type: string
+      label: ID
+    domain:
+      type: string
+      label: 'Domain'
+    did:
+      type: string
+      label: 'Did'
+    uuid:
+      type: string

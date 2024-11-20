@@ -1,0 +1,25 @@
+<?php
+
+declare(strict_types=1);
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Atproto did module.
+ */
+
+use Drupal\user\RoleInterface;
+
+/**
+ * Implements hook_install().
+ */
+function atproto_did_install($is_syncing): void {
+
+  // Don't continue if this is a config sync operation.
+  if ($is_syncing) {
+    return;
+  }
+
+  // Allow anon and auth users access to the /.well-known/atproto-did.
+  user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, ['view .well-known atproto_did']);
+  user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['view .well-known atproto_did']);
+}
